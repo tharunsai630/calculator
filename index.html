@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <canvas id="bg-canvas" aria-hidden="true"></canvas>
+    <div class="page">
+      <div class="wrap">
+        <header>
+          <h1>Calculator</h1>
+          <div class="sub">A clean, modern, keyboard-friendly calculator</div>
+        </header>
+
+        <section class="calculator" role="application" aria-label="Calculator">
+          <div class="display" aria-live="polite" aria-atomic="true">
+            <div class="prev" id="prev-display"></div>
+            <div class="curr" id="curr-display">0</div>
+          </div>
+
+          <div class="grid" role="group" aria-label="Keypad">
+            <!-- Row 1: AC, DEL, empty, ÷ -->
+            <button class="key ac" data-action="ac" aria-label="All Clear"><span>AC</span></button>
+            <button class="key del" data-action="del" aria-label="Delete">DEL</button>
+            <div></div>
+            <button class="key op" data-op="/" aria-label="Divide">÷</button>
+
+            <!-- Row 2: 7 8 9 × -->
+            <button class="key" data-num="7">7</button>
+            <button class="key" data-num="8">8</button>
+            <button class="key" data-num="9">9</button>
+            <button class="key op" data-op="*" aria-label="Multiply">×</button>
+
+            <!-- Row 3: 4 5 6 − -->
+            <button class="key" data-num="4">4</button>
+            <button class="key" data-num="5">5</button>
+            <button class="key" data-num="6">6</button>
+            <button class="key op" data-op="-" aria-label="Subtract">−</button>
+
+            <!-- Row 4: 1 2 3 + -->
+            <button class="key" data-num="1">1</button>
+            <button class="key" data-num="2">2</button>
+            <button class="key" data-num="3">3</button>
+            <button class="key op" data-op="+" aria-label="Add">+</button>
+
+            <!-- Row 5: 0(span2) . = -->
+            <button class="key span-2" data-num="0">0</button>
+            <button class="key" data-decimal=".">.</button>
+            <button class="key equals" data-action="equals" aria-label="Equals">=</button>
+          </div>
+          <div class="hint">Tip: Use your keyboard. Esc = AC, Backspace = DEL, Enter = =</div>
+        </section>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
